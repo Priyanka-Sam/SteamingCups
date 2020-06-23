@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient"
+    android:padding="25dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:clipToPadding="false">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit"
+            android:hint="Enter your name"
+            android:textColor="#392613"
+            android:textSize="30dp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            />
+    <TextView
+        android:text="SELECT COFFEE TYPE"
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#392613"
+        android:textSize="30dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_below="@id/edit"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text3"
+        android:id="@+id/rg"
+        android:outlineAmbientShadowColor="#392613">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Latté"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            android:buttonTint="#392613"
+            />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Espresso"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:buttonTint="#392613"
+            />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frappuchino"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+            android:buttonTint="#392613"
+            />
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text4"
+        android:text="TOPPINGS"
+        android:textSize="30dp"
+        android:textColor="#392613"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_below="@+id/rg"
+        />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb1"
+        android:text="Whipped Cream"
+        android:textSize="25dp"
+        android:paddingLeft="25dp"
+        android:layout_below="@+id/text4"
+        android:textColor="@android:color/white"
+        android:buttonTint="#392613"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb2"
+        android:text="Chocolate Sauce "
+        android:textSize="25dp"
+        android:paddingLeft="25dp"
+        android:layout_below="@+id/cb1"
+        android:textColor="@android:color/white"
+        android:buttonTint="#392613"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb3"
+        android:text="Caramel"
+        android:textSize="25dp"
+        android:paddingLeft="25dp"
+        android:layout_below="@+id/cb2"
+        android:textColor="@android:color/white"
+        android:buttonTint="#392613"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text0"
+        android:text="QUANTITY"
+        android:textSize="30dp"
+        android:textColor="#392613"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_below="@+id/cb3"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/text0"
+        android:id="@+id/linear">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="60dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:onClick="sub"
+            android:textColor="@android:color/white"
+            android:background="#996633"
+            android:elevation="20dp"
+            android:translationZ="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:hint="0"
+            android:textSize="60dp"
+            android:textColor="#392613"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="60dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:onClick="add"
+            android:background="#996633"
+            android:textColor="@android:color/white"
+            android:translationZ="10dp"
+            android:elevation="20dp"
+            />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"
+        android:text="ORDER SUMMARY"
+        android:textSize="30dp"
+        android:textColor="#392613"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_below="@+id/linear"   />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:hint="-"
+        android:textSize="20dp"
+        android:textColor="#392613"
+        android:padding="17dp"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_below="@+id/text2"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt3"
+        android:text="ORDER"
+        android:textSize="50dp"
+        android:padding="10dp"
+        android:background="#996633"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/price"
+        android:onClick="submitOrder"
+        android:layout_weight="1"
+        android:elevation="20dp"
+        android:translationZ="20dp"
+        />
+
+
+    </RelativeLayout>
+</ScrollView>
